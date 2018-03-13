@@ -9,7 +9,6 @@ int main()
   point d;
   b = point(3.0 , 4.0);
   c = new point(5.0 , 6.0);
-  //c.display();
   cout<<"C out :"<<*c<<endl;
   d = b + a;
   d.display();
