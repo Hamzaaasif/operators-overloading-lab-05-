@@ -41,7 +41,7 @@ class point
     a.y = this->y + A.y;
     return a;
   };
-
+  
   point operator -(point& A)
   {
     point a;
@@ -97,6 +97,40 @@ class point
     return a;
   };
 
+  point (float p)
+  {
+    this->x=p;
+    this->y=0;
+  };
+
+  bool operator ()()
+  {
+    if(this->x != 0 && this->y != 0)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  };
+  
+  float operator [](int a)
+  {
+    if(a==1)
+    {
+      return this->x; 
+    }
+    else
+    {
+      return this->y;
+    }
+  };
+
+  void operator = (const float A)
+  {
+    this->x = A;
+  };
 
 
 private:
